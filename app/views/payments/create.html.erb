@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Razorpay Payment Page</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <h1>Payment Page</h1>
+  <p>Redirecting to Razorpay payment page...</p>
+
+  <script>
+    var options = {
+      key: '<%= Rails.configuration.razorpay_key_id %>',
+      name: "MEDIUM CLONE",
+      description: "Subscription Plan",
+      image: "https://your-logo-url.com/logo.png",
+      order_id: '<%= @order.id %>',
+      handler: function(response) {
+        if (response.razorpay_payment_id) {
+          window.location.href = '/payment/success?order_id=<%= @order.id %>&plan_id=<%= @order.notes['plan_id'] %>&payment_id=' + response.razorpay_payment_id;
+        } else {
+          window.location.href = '/payment/failure';
+        }
+      }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+Shared Post
+
+Hello <%= @recipient_email %>,
+
+You have received a shared post from <%= @current_user.username %>.
+
+Post Details:
+Title: <%= @post.title %>
+Topic: <%= @post.topic %>
+Text: <%= @post.text %>
+Read Time: <%= @post.read_time %> minutes
+Like Count: <%= @post.like_count %>
+Comment Count: <%= @post.comment_count %>
+View Count: <%= @post.view_count %>
+
+File URL: <%= @file_url %>
+
+<% if !@comments.nil? %>
+Comments:
+<% @comments.each do |comment| %>
+- <%= comment.body %>
+<% end %>
+<% else %>
+No comments yet.
+<% end %>
+
+Thank you!

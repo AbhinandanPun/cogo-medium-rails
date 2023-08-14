@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Shared List</h1>
+  <p>Hello <%= @recipient_email %>,</p>
+  <p>You have received a shared list from <%= @current_user.username %>.</p>
+  <p>List Name: <%= @list.name %></p>
+  
+  <h2>List Details:</h2>
+  <ul>
+    <% @post.each do |post| %>
+      <li>
+        <h3><%= post.title %></h3>
+        <p><%= post.topic %></p>
+        <a href="<%= "http://127.0.0.1:3000/posts/#{post.id}" %>">View Post</a>
+      </li>
+    <% end %>
+  </ul>
+  
+  <p>Thank you!</p>
+</body>
+</html>
