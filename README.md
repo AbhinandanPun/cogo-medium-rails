@@ -23,11 +23,18 @@ The request respone for each of the apis endpoints were saved as example.
 
 ![alt text](https://github.com/AbhinandanPun/medium-rails/blob/main/postman_saved_examples.png?raw=true)
 
-.
-.
-.
-.
-.
+
+## Share post or list of post via email
+
+The user after signup / signin could share a post or list of post through email  
+
+![alt text](https://github.com/AbhinandanPun/medium-rails/blob/main/share%20post%20and%20list%20of%20post.png?raw=true)
+  
+.  
+.  
+.  
+.  
+.  
 **Thank You**
 
 
