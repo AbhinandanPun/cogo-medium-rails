@@ -1,3 +1,7 @@
+# MEDIUM-RAILS
+![Portion-Watermarking](https://socialify.git.ci/AbhinandanPun/medium-rails/image?font=Raleway&language=1&name=1&owner=1&pattern=Floating%20Cogs&stargazers=1&theme=Dark)
+
+
 ## Requirements
 
 These are the problem statements
